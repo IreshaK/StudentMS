@@ -62,6 +62,9 @@ class Student{// creating student class
             console.log("Invalid input");
         }
     }
+    get studentMarks(){
+        return this.stu_marks;
+    }
 }// end of class Student
 
 module.exports={Student};
