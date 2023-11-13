@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/IreshaK/StudentMS/issues"
   },
-  "homepage": "https://github.com/IreshaK/StudentMS#readme"
+  "homepage": "https://github.com/IreshaK/StudentMS#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
