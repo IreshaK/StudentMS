@@ -22,13 +22,14 @@ while(true){// start
         let stuMarks=prompt("Enter Student Marks :");
         stuFunctions.addStudentMarks(stuNo,stuMarks);
         choice=0;
-
     }
     else if(choice==3){
 
     }
     else if(choice==4){
-
+        let stuNo=prompt("Enter a Studenet No to write details : ");
+        stuFunctions.writeStudentDetails(stuNo);
+        choice=0;
     }
     else if(choice==5){
 
