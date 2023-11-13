@@ -1,6 +1,8 @@
 const ps=require('prompt-sync');
 const prompt=ps();
 
+const fs=require('fs');// calling file system npm package
+
 const {Student}=require('./Student.js');// importing student class for Student.js
 
 var studentDetails=new Array();// creating a global array to store student objects
@@ -60,6 +62,23 @@ function addStudentMarks(stuno,stumarks){// add marks to student object
         }
     }
     console.log(studentDetails);
-}
+}// end of sunction add marks
 
-module.exports={regStudents,addStudentMarks};
+function writeStudentDetails(stuno){// display details in atext file
+
+        for(var i=0;i<studentDetails.length;i++){
+
+            if(studentDetails[i].studentNo==stuno){
+                //writeFileSync(fileName.extention,content to write)
+                const stuDetails=fs.writeFileSync(studentDetails[i].studentNo+'.txt','Student No : '+studentDetails[i].studentNo+'\nStudent Name : '+studentDetails[i].studentName+'\nStudent Marks : '+studentDetails[i].studentMarks);
+
+                console.log('Data written to  a external File');
+                console.log(studentDetails);
+                break;
+            }
+        }
+}// end of file write function
+
+
+
+module.exports={regStudents,addStudentMarks,writeStudentDetails};
