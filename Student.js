@@ -9,12 +9,12 @@ class Student{// creating student class
     }
     // creating setters and getters
     set studentNo(stuno){
-        if(stuno.lenght==5)// checking number of characters
+        if(stuno.length==5)// checking number of characters
         {
             this.stu_no=stuno;
         }
         else{
-            console.log("Invalid Value for Stu No ");
+            console.log("Invalid Value for Stu No :");
         }
     }
     get studentNo(){
@@ -25,7 +25,7 @@ class Student{// creating student class
             this.stu_name=sname;
         }
         else{
-            console.log("Invalid Value fior Name");
+            console.log("Invalid Value fior Name :");
         }
     }
     get studentName(){
@@ -36,7 +36,7 @@ class Student{// creating student class
             this.stu_bday=bday;
         }
         else{
-            console.log("Invalid Value for B'day (ddmmyyyy)");
+            console.log("Invalid Value for B'day (ddmmyyyy) :");
         }
     }
     get stduentBday(){
