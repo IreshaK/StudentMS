@@ -32,7 +32,9 @@ while(true){// start
         choice=0;
     }
     else if(choice==5){
-
+        let cName=prompt("Enter Class Name : ");
+        stuFunctions.classAverage(cName);
+        choice=0;
     }
     else if(choice==6){
         break;// exiting from the loop
