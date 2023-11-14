@@ -79,6 +79,25 @@ function writeStudentDetails(stuno){// display details in atext file
         }
 }// end of file write function
 
+function classAverage(className){
+
+    let classAvg=0;
+    let total=0;
+    let stuCount=0;
+
+    for(var i=0;i<studentDetails.length;i++){
+
+        if(studentDetails[i].studentClass==className){
+            total=total+Number(studentDetails[i].studentMarks);
+            
+            stuCount++; //stuCount=stuCount+1 , conting num of marks added
+        }
+    }
+    classAvg=total/stuCount;
+    console.log("================");
+    console.log(" Average marks : "+classAvg )
+
+}
 
 
-module.exports={regStudents,addStudentMarks,writeStudentDetails};
+module.exports={regStudents,addStudentMarks,writeStudentDetails,classAverage};
