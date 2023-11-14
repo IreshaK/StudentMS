@@ -25,6 +25,9 @@ while(true){// start
     }
     else if(choice==3){
 
+        stuFunctions.calGreade();
+        choice=0;
+
     }
     else if(choice==4){
         let stuNo=prompt("Enter a Studenet No to write details : ");

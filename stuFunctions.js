@@ -95,7 +95,7 @@ function classAverage(className){// to calculate the average marks for each clas
     console.log(" Average marks : "+classAvg );
 }// enf of function calAverage
 
-function calGreade(){
+function calGreade(){// to calculate the Grade 
 
     let stuNo=prompt('Enter Student No :');
 
@@ -119,8 +119,7 @@ function calGreade(){
         }
 
     }
-
-}
+}// end of CalGrade function
 
 
 module.exports={regStudents,addStudentMarks,writeStudentDetails,classAverage,calGreade};
