@@ -79,25 +79,48 @@ function writeStudentDetails(stuno){// display details in atext file
         }
 }// end of file write function
 
-function classAverage(className){
-
+function classAverage(className){// to calculate the average marks for each class
     let classAvg=0;
     let total=0;
     let stuCount=0;
-
     for(var i=0;i<studentDetails.length;i++){
-
         if(studentDetails[i].studentClass==className){
             total=total+Number(studentDetails[i].studentMarks);
             
-            stuCount++; //stuCount=stuCount+1 , conting num of marks added
+            stuCount++; //stuCount=stuCount+1 , counting num of marks added
         }
     }
     classAvg=total/stuCount;
     console.log("================");
-    console.log(" Average marks : "+classAvg )
+    console.log(" Average marks : "+classAvg );
+}// enf of function calAverage
+
+function calGreade(){
+
+    let stuNo=prompt('Enter Student No :');
+
+    for(var i=0;i<studentDetails.length;i++){
+        if(studentDetails[i].studentNo==stuNo)
+        {
+            let marks=studentDetails[i].studentMarks;
+
+            if(marks>=80){
+                console.log("A");
+            }
+            else if(marks>=60){
+                console.log("B");
+            }
+            else if (marks>=45){
+                console.log("C");
+            }
+            else{
+                console.log("F");
+            }
+        }
+
+    }
 
 }
 
 
-module.exports={regStudents,addStudentMarks,writeStudentDetails,classAverage};
+module.exports={regStudents,addStudentMarks,writeStudentDetails,classAverage,calGreade};
